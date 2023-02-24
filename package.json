@@ -1,12 +1,13 @@
 {
   "name": "api",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "API desenvolvida no programa explorer da Rocketseat",
   "main": "index.js",
   "scripts": {
     "start": "pm2-runtime start ecosystem.config.js --env production",
     "dev": "nodemon ./src/server.js",
-    "migrate": "knex migrate:latest"
+    "migrate": "knex migrate:latest",
+    "test": "jest --watch"
   },
   "author": "Luiz Felipe Bonatto",
   "license": "ISC",
@@ -24,6 +25,7 @@
     "sqlite3": "^5.1.4"
   },
   "devDependencies": {
+    "jest": "^29.4.3",
     "nodemon": "^2.0.20"
   }
 }
